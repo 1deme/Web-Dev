@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    max-width: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-color: #4caf50;
+    background-color: #4caf50;
+}
+
+.nav-bar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    display: inline-block;
+    margin: 0;
+}
+
+.nav-link:hover {
+    border-color: #45a049;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.profile-card {
+    display: inline-block;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd;
+    padding: 20px;
+    max-width: 300px;
+    min-width: 250px;
+    margin: 10px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+}
+
+.profile-pic {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #4caf50;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    overflow: hidden;
+}
+
+.profile-name {
+    margin: 10px 0;
+    color: #333;
+}
+
+.profile-bio {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.hover-focus {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #4caf50;
+    border-radius: 10px; /* Makes the button rounder */
+    display: inline-block;
+    margin: 0;
+}
+
+.hover-focus:hover {
+    border-color: #45a049;
+    background-color: #45a049;
+}
+
+.hover-focus:focus {
+    border-color: #388e3c;
+    background-color: #388e3c;
+}
