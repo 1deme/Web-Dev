@@ -1,103 +1,103 @@
+/* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    color: #333;
-    max-width: 100%;
+    margin: 0; /* Removes default browser margin */
+    padding: 0; /* Removes default browser padding */
+    color: #333; /* Sets text color to a dark gray */
 }
 
+/* Navigation Bar */
 .nav-bar {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 10px 0;
-    margin: 0;
-    border-bottom-width: 2px;
-    border-style: solid;
-    border-color: #4caf50;
-    background-color: #4caf50;
+    display: flex; /* Aligns list items horizontally */
+    justify-content: center; /* Centers the navigation bar content */
+    list-style-type: none; /* Removes default list bullet points */
+    padding: 10px 0; /* Adds vertical padding to the navigation bar */
+    margin: 0; /* Removes default margin around the navigation bar */
+    border-bottom-width: 2px; /* Adds a 2px bottom border */
+    border-style: solid; /* Specifies the border as solid */
+    border-color: #4caf50; /* Sets the border color to green */
+    background-color: #4caf50; /* Sets the background color of the nav bar to green */
 }
 
 .nav-bar li {
-    display: inline;
-    margin: 0 15px;
+    display: inline; /* Ensures list items are displayed inline */
+    margin: 0 15px; /* Adds horizontal spacing between items */
 }
 
 .nav-link {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: transparent;
-    display: inline-block;
-    margin: 0;
+    color: white; /* Sets link text color to white */
+    text-decoration: none; /* Removes underline from links */
+    padding: 5px 10px; /* Adds padding around the link text */
+    border-width: 1px; /* Sets a thin border */
+    border-color: transparent; /* Makes the border initially invisible */
+    display: inline-block; /* Ensures padding and margin work properly */
+    margin: 0; /* Removes default margin */
 }
 
 .nav-link:hover {
-    border-color: #45a049;
+    border-color: #45a049; /* Changes the border color on hover to a darker green */
 }
 
+/* Profile Container */
 .profile-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px auto;
-    padding: 10px;
+    display: flex; /* Aligns child elements horizontally */
+    justify-content: center; /* Centers the content horizontally */
+    margin: 20px auto; /* Adds vertical margin and centers horizontally */
+    padding: 10px; /* Adds padding inside the container */
 }
 
 .profile-card {
-    display: inline-block;
-    background-color: white;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ddd;
-    padding: 20px;
-    max-width: 300px;
-    min-width: 250px;
-    margin: 10px;
-    border-top-width: 5px;
-    border-bottom-width: 5px;
+    display: inline; /* Ensures cards are displayed inline */
+    background-color: white; /* Sets the card background to white */
+    border-width: 1px; /* Adds a thin border */
+    border-style: solid; /* Specifies the border as solid */
+    border-color: #ddd; /* Light gray border color */
+    padding: 20px; /* Adds padding inside the card */
+    max-width: 300px; /* Sets the maximum card width */
+    min-width: 250px; /* Sets the minimum card width */
+    margin: 10px; /* Adds spacing between cards */
+    border-top-width: 5px; /* Adds a thicker top border */
+    border-bottom-width: 5px; /* Adds a thicker bottom border */
 }
 
 .profile-pic {
-    display: block;
-    width: 150px;
-    height: 150px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #4caf50;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    overflow: hidden;
+    display: block; /* Ensures the image is a block element */
+    width: 150px; /* Sets the width of the profile picture */
+    height: 150px; /* Sets the height of the profile picture */
+    border-width: 5px; /* Adds a thick border */
+    border-style: solid; /* Specifies the border as solid */
+    border-color: #4caf50; /* Green border color */
+    border-radius: 50%; /* Makes the image circular */
+    margin: 0 auto 15px; /* Centers the image and adds bottom margin */
 }
 
 .profile-name {
-    margin: 10px 0;
-    color: #333;
+    margin: 10px 0; /* Adds vertical spacing above and below the name */
+    color: #333; /* Sets the text color to dark gray */
 }
 
 .profile-bio {
-    margin-bottom: 15px;
-    color: #666;
+    margin-bottom: 15px; /* Adds spacing below the bio */
+    color: #666; /* Sets the text color to a lighter gray */
 }
 
+/* Button Styles */
 .hover-focus {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #4caf50;
-    border-radius: 10px; /* Makes the button rounder */
-    display: inline-block;
-    margin: 0;
+    padding: 10px 20px; /* Adds padding inside the button */
+    background-color: #4caf50; /* Sets button background to green */
+    color: white; /* Sets button text color to white */
+    border-width: 2px; /* Adds a border around the button */
+    border-color: #4caf50; /* Matches border color to background */
+    border-radius: 10px; /* Rounds the button edges */
+    display: inline-block; /* Ensures button behaves like an inline block */
+    margin: 0; /* Removes default margin */
 }
 
 .hover-focus:hover {
-    border-color: #45a049;
-    background-color: #45a049;
+    border-color: #45a049; /* Changes border color on hover to darker green */
+    background-color: #45a049; /* Changes background color on hover to darker green */
 }
 
 .hover-focus:focus {
-    border-color: #388e3c;
-    background-color: #388e3c;
+    border-color: #388e3c; /* Changes border color when focused to even darker green */
+    background-color: #388e3c; /* Changes background color when focused to even darker green */
 }
