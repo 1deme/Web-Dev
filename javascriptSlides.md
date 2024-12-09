@@ -1,0 +1,1 @@
+slide No1 : https://rawgit.com/CS-LNU-Learning-Objects/javascript/master/lectures/01/index.html#5
