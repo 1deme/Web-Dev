@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation Example</title>
+    <style>
+        #outer {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #middle {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #inner {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="outer">
+        Outer
+        <div id="middle">
+            Middle
+            <div id="inner">
+                Inner
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logEvent(event) {
+            console.log(`You clicked: ${this.id}`);
+        }
+
+        function stopPropagation(event) {
+            event.stopPropagation(); // Stops the event from bubbling up
+            console.log(`Propagation stopped at: ${this.id}`);
+        }
+
+
+        // Select the divs
+        let outer = document.getElementById('outer');
+        let middle = document.getElementById('middle');
+        let inner = document.getElementById('inner');
+
+        // Add event listeners (default is bubbling)
+        inner.addEventListener('click', stopPropagation);
+
+        // Add event listeners for capturing phase
+        outer.addEventListener('click', stopPropagation, true);
+        middle.addEventListener('click', stopPropagation, true);
+        inner.addEventListener('click', stopPropagation, true);
+    </script>
+
+</body>
+</html>
