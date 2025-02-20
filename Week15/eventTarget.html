@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Propagation Example</title>
+  <style>
+    /* Optional styling for clarity */
+    #links a {
+      display: block;
+      margin: 5px 0;
+      color: blue;
+    }
+    #nested-example {
+      margin-top: 40px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    #outer {
+      border: 1px solid red;
+      padding: 10px;
+    }
+    #middle {
+      border: 1px solid green;
+      padding: 10px;
+      margin-top: 5px;
+    }
+    #inner {
+      border: 1px solid blue;
+      padding: 10px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Example 1: Links -->
+  <div id="links">
+      <a href="#">The first link</a>
+      <a href="#">The second link</a>
+      <a href="#">The third link</a>
+      <a href="#">The forth link</a>
+  </div>
+
+  <!-- Example 2: Nested Divs -->
+  <div id="nested-example">
+    <div id="outer">
+      Outer Div
+      <div id="middle">
+        Middle Div
+        <div id="inner">
+          Inner Div
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Example 1: Links
+    let aTags = document.querySelectorAll('#links a');
+
+    aTags.forEach((a, i) => {
+      a.addEventListener('click', event => {
+        console.log("Link index:", i);                      // Logs index: 0, 1, 2, 3
+        console.log("Link text:", event.target.textContent);  // Logs the clicked link's text
+      });
+    });
+
+    // Example 2: Nested Divs
+    let outerDiv = document.getElementById('outer');
+    let middleDiv = document.getElementById('middle');
+    let innerDiv = document.getElementById('inner');
+
+    [outerDiv, middleDiv, innerDiv].forEach(div => {
+      div.addEventListener('click', event => {
+        console.log("Div Listener on:", div.id);
+        console.log("Clicked Element Text:", event.target.textContent.trim());
+      });
+    });
+  </script>
+
+</body>
+</html>
